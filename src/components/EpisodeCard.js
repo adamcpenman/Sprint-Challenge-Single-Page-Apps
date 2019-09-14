@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
 
 const Div = styled.div`
 width: 100%;
@@ -23,16 +24,16 @@ background-color: #E5E5E5;
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 `
 
-function LocationCard({ location }) {
-  return (
+function EpisodeCard ({ episode }) {
+   return (
     <Div>
-      <H2>{location.name}</H2>
+      <H2>{episode.name}</H2>
       <Body>
-        <p>{location.type + " " + location.dimension}</p>
-        <p>Number of Residents: {location.residents.length}</p>
+        <p>{episode.air_date}</p>
+        <p>{episode.episode}</p>
       </Body>
     </Div>
   )
 }
 
-export default LocationCard;
+export default EpisodeCard;
